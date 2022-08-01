@@ -21,9 +21,11 @@
   <link rel="stylesheet" href="css/rodape.css">    
   <link rel="stylesheet" href="css/dialogNewsletter.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width" />
 </head>
 <body>
+  
+  <a href="#conteudoPrincipal" class="pularNavegacao">Pular para conteúdo principal</a>
 
   <header class="cabecalho container">
     <a href="#" class="cabecalho-logo" title="Home da Apeperia">
@@ -65,9 +67,9 @@
     </nav>
   </header>
 
-  <main class="conteudo">
+  <main class="conteudo" role="main"> <!--Da suporte para os leitores de tela que aqui é o conteudo principal-->
 
-    <section class="secaoDestaque">
+    <section class="secaoDestaque"  id="conteudoPrincipal">
       <h1 class="secaoDestaque-titulo">
         APLICATIVOS NA MEDIDA
       </h1>
@@ -277,22 +279,22 @@
       <div class="container">
         <h2 class="secaoDestaques-titulo tituloPadrao">DESTAQUES</h2>
 
-        <a href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste" class="secaoDestaques-link">
-          <div class="secaoDestaques-destaque">
+        <a href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste" class="secaoDestaques-link" aria-labelledby="tituloDestaque1">
+          <figure class="secaoDestaques-destaque" >
             <img src="img/comecando-criar-logotipo.png" class="secaoDestaques-destaque-img" alt="Ferramentas designer. Ilustração">
-            <p class="secaoDestaques-destaque-titulo"  id="tituloDestaque1">
+            <figcaption class="secaoDestaques-destaque-titulo"  id="tituloDestaque1">
               Conheça as primeiras etapas na criação de um logotipo
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </a>
 
-        <a href="http://blog.apeperia.com.br/design/dicas-como-fotografar-com-celular" class="secaoDestaques-link">
-          <div class="secaoDestaques-destaque">
+        <a href="http://blog.apeperia.com.br/design/dicas-como-fotografar-com-celular" class="secaoDestaques-link" aria-labelledby="tituloDestaque2">
+          <figure class="secaoDestaques-destaque" >
             <img src="img/dicas-fotografia.png" class="secaoDestaques-destaque-img"alt="Moça mostrando câmera para rapaz">
-            <p class="secaoDestaques-destaque-titulo"  id="tituloDestaque2">
+            <figcaption class="secaoDestaques-destaque-titulo"  id="tituloDestaque2">
               Veja dicas de como fotografar usando seu celular
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </a>
 
         <button class="secaoDestaques-form-botao btnPadrao btnPadrao--pequeno" id="abreDialog">
@@ -339,13 +341,13 @@
           </p>
 
           <div class="contatoCampo contatoCampo--sucesso">
-            <label>Nome: </label>
-            <input type="text" class="contatoCampo--validouFoi" value="Natan Souza" required>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" class="contatoCampo--validouFoi" placeholder="Nome..." required>
           </div>  
 
           <div class="contatoCampo contatoCampo--erro">
-            <label>Email: </label>
-            <input type="email" class="contatoCampo--validouErro" required>
+            <label for="email">Email: </label>
+            <input type="email" id="email" class="contatoCampo--validouErro" required>
             <span class="contatoCampo-msg contatoCampo-msg--erro">
               Você quis dizer <a href="#">gmail.com?</a>
             </span>
@@ -364,22 +366,22 @@
 
           <div class="contatoCampo">
             <label>Endereço: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Rua Vergueiro">
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro">
           </div>   
 
           <div class="contatoCampo">
             <label>Bairro: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Vila Mariana">
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana">
           </div>   
 
           <div class="contatoCampo">
             <label>Cidade: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="São Paulo">
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="São Paulo">
           </div>   
 
           <div class="contatoCampo">
             <label>Estado: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="SP">
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="SP">
           </div>   
 
           <div class="contatoCampo">
@@ -425,7 +427,8 @@
           </p>
         </div>
 
-        <video src="img/formacao-java.mp4" class="secaoInstitucional-video">
+        <video src="img/formacao-java.mp4" class="secaoInstitucional-video" controls >
+         <track src="img/legenda-portugues-brasil.vtt" kind="subtitles" srclang="pt-br" label="Português (Brasil)">   
         </video>
 
       </div>

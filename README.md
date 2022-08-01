@@ -46,3 +46,9 @@ Lembre-se de pontos como:
 - colocar o elemento <title> em SVGs que forem inline (código direto no HTML).
 
 ### 03. CSS interfere no leitor de tela? Listas e display: none
+
+### 04. Um pouco sobre roles e arias
+
+### 05. Formulário acessível
+
+![Print](image.png)
